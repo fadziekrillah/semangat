@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Semangat Kerja Widya 💙</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+/* Floating hearts */
+.heart {
+  position: absolute;
+  color: #ff6b9c;
+  font-size: 20px;
+  animation: float 6s infinite ease-in;
+  opacity: 0.7;
+}
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+.card {
+  background: white;
+  border-radius: 26px;
+  padding: 30px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  animation: fadeIn 1.2s ease;
+  z-index: 10;
+}
+
+h1 {
+  color: #0b5ed7;
+  margin-bottom: 10px;
+}
+
+.badge {
+  background: linear-gradient(90deg, #e63946, #0b5ed7);
+  color: white;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #444;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+img {
+  width: 200px;
+  border-radius: 18px;
+  margin: 15px 0;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.gif {
+  width: 170px;
+  border-radius: 14px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #0b5ed7, #168aad);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hearts -->
+<script>
+for (let i = 0; i < 15; i++) {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "💙";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDelay = Math.random() * 5 + "s";
+  heart.style.fontSize = (Math.random() * 15 + 15) + "px";
+  document.body.appendChild(heart);
+}
+</script>
+
+<div class="card">
+  <div class="badge">SEMANGAT KERJA 💪</div>
+
+  <h1>Hallo widya 🌷</h1>
+
+  <p>
+    Semoga hari kerja kamu lancar ya.  
+    Terima kasih sudah berjuang,  
+    meski capek tapi tetap kuat 🤍
+  </p>
+
+  <!-- SilverQueen -->
+  <img src="coklat.jpeg" alt="SilverQueen">
+
+  <p>
+    Anggap ini coklat SilverQueen virtual 🍫  
+    Biar manisnya nambah semangat kamu ✨
+  </p>
+
+  <!-- Cewek kerja vibes -->
+  <img class="gif" src="kasir.jpeg" alt="Kerja Semangat">
+
+  <p>
+    Kamu itu hebat, Positif vibes banget keren,itu foto aku lagi belanja terus kasir nya kamu 😬
+  </p>
+
+  <button onclick="alert('Semangat terus ya Widya 💙 Jangan lupa istirahat, makan, dan senyum 🌸')">
+    Klik Kalau Capek 🤍
+  </button>
+</div>
+
+</body>
+</html>
